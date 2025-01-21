@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent-con{
+            background-color: yellowgreen;
+            border: 2px solid;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+        }
+        .red-con{
+            margin-left: 10px;
+            padding: 5px;
+            background-color: red;
+            border: 2px solid;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 1.2rem;
+        }
+        .child-con{
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 3px;
+        }
+        .pink-con{
+            background-color: pink;
+            border: 2px solid;
+            margin-right: 20px;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .blue-con{
+            background-color: lightblue;
+            border: 2px solid;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .white-con{
+            background-color: white;
+            border: 2px solid;
+            display: none;
+            font-size: 1.2rem;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+        @media screen and (max-width : 640px){
+            .white-con{
+                display: block;
+            }
+            .pink-con{
+                display: none;
+            }
+            .blue-con{
+                display: none;
+            }
+        }
+        /* .media-query1{
+            background-color: beige;
+        } */
+        @media screen and (min-width : 768px) and (max-width : 1024px){
+            body{
+                background-color: lightblue;
+            }
+        }
+        @media screen and (min-width : 600px) and (max-width : 1200px){
+            .media-query2{
+                font-size: 18px;
+            } 
+        }
+        .media-query3{
+            display: flex;
+        }
+        @media screen and (min-width : 480px) {
+            .media-query3{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        @media screen and (min-width : 500px) and (max-width : 800px){
+            h1{
+                color: green;
+            }
+        }
+        .media-query5 img{
+            display: block;
+        }
+        @media screen and (max-width : 400px){
+            .media-query5 img{
+                display: none;
+            }
+        }
+        .media6{
+            width: 300px;
+            height: 300px;
+            border: 2px solid;
+        }
+        @media screen and (min-width : 1024px){
+            .media6{
+                padding: 20px;
+            }
+        }
+        .header{
+            height: 90px;
+            text-align: center;
+        }
+        @media screen and (min-width : 600px) and (max-width : 1200px) {
+            .header{
+                background-color: lightgray;
+            }
+        }
+        @media screen and (max-width : 480px){
+            p{
+                font-size: 16px;
+            }
+        }
+        @media screen and (min-width : 768px) and (max-width : 1200px){
+            .media9{
+                display: grid;
+                text-align: center;
+                grid-template-columns: 1fr 1fr;
+                background-color: whitesmoke;
+                border: 2px solid lightseagreen;
+                padding: 8px;
+            }
+        }
+        .media10 img{
+            width: 400px;
+            height: 400px;
+        }
+        @media screen and (max-width : 600px){
+            .media10 img{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width : 700px) and (max-width : 1200px){
+            .media11 a{
+                color: blue;
+                text-decoration: none;
+            }
+        }
+        @media screen and (min-width : 500px) and (max-width : 800px){
+            .media12 h2{
+                font-size: 24px;
+            }
+        }
+        .media13{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(232, 222, 205);
+        }
+        @media screen and (min-width : 1024px){
+            .media13{
+                border: 2px solid red;
+            }
+        }
+        @media screen and (min-width : 800px) and (max-width : 1200px){
+            .media14{
+                border: 2px solid;
+            }
+        }
+        .media15{
+            display: flex;
+            gap: 20px;
+        }
+        @media screen and (min-width : 600px){
+            .media15{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>task-2</h1>
+    <header>
+        <div class="parent-con">
+        <div class="red-con">Red</div>
+        <div class="child-con">
+            <div class="pink-con">Pink</div>
+            <div class="blue-con">Blue</div>
+            <div class="white-con">White</div>
+        </div>
+        </div>
+    </header>
+    <h1>Q-1</h1>
+    <div class="media-query1">body color changed to lightblue.</div>
+    <h1>Q-2</h1>
+    <div class="media-query2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, alias velit animi omnis iure ullam incidunt quibusdam consectetur neque quas tempore vel assumenda voluptate nihil ex tenetur nesciunt itaque voluptatibus.
+    Quas quidem veritatis numquam. Harum nemo, ipsa cum labore in deserunt alias numquam, mollitia vel tempore modi impedit, consectetur aliquid reprehenderit sed. Amet, tenetur? Numquam assumenda vel quidem ex voluptates!
+    Inventore optio nobis aperiam pariatur beatae officia nisi voluptatibus harum molestias consectetur quos, tempora modi porro ipsa soluta quaerat iste sapiente nemo quae. Dolor consectetur aspernatur perferendis, voluptate nobis nisi.
+    Dolore dicta deleniti voluptates quasi architecto asperiores dignissimos expedita earum neque quibusdam. Fugit maxime dolorum, quos mollitia, voluptas voluptatibus quia doloremque voluptates excepturi obcaecati similique quae nulla ea praesentium nemo?</p></div>
+    <h1>Q-3</h1>
+    <div class="media-query3">
+        <div class="sub">Hello</div>
+        <div class="sub2">World</div>
+    </div>
+    <h1>Q-5</h1>
+    <div class="media-query5">
+        <img src="https://w0.peakpx.com/wallpaper/446/253/HD-wallpaper-damon-salvatore-damon-salvatore-delena-love-stefan-stefan-salvatore-the-vampire-diaries-thevampirediaries-tvd-vampire.jpg" width="450" height="400" alt="">
+    </div>
+    <h1>Q-6</h1>
+    <div class="media6">some random text goes on here.</div>
+    <h1>Q-7</h1>
+    <header class="header">This is header text with light gray color</header>
+    <h1>Q-8</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aperiam esse illum quod tenetur! Culpa necessitatibus tempore animi non similique nam voluptas. Debitis veritatis consequuntur neque iste corrupti, accusantium cum.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro maxime laborum vel hic rerum nisi sequi facilis possimus minus eaque ipsa repellendus nobis, recusandae id, veniam eveniet fuga et! Quibusdam?</p>
+    <h1>Q-9</h1>
+    <div class="media9">
+        <div class="col-1">column-1</div>
+        <div class="col-2">column-2</div>
+    </div>
+    <h1>Q-10</h1>
+    <div class="media10"><img src="https://m.media-amazon.com/images/M/MV5BNjQyODk4MTQxNF5BMl5BanBnXkFtZTgwOTg2NTc0MDE@._V1_.jpg" alt=""></div>
+    <h1>Q-11</h1>
+    <div class="media11">
+        <a href="https://media.npr.org/assets/img/2015/09/23/ap_836720500193_wide-1be0cfc508ffc714e17caf318ec5103ae1e6d2f4.jpg?s=1400&c=100&f=jpeg">Link-1</a>
+        <a href="https://i.ytimg.com/vi/s90EKnc_Cgg/hqdefault.jpg">Link-2</a>
+    </div>
+    <h1>Q-12</h1>
+    <div class="media12">
+        <h2>some random text here</h2>
+        <h2>some more random text goes here</h2>
+    </div>
+    <h1>Q-13</h1>
+    <div class="media13"></div>
+    <h1>Q-14</h1>
+    <div class="media14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tenetur veniam cum praesentium quam labore omnis deserunt, suscipit necessitatibus magnam. Necessitatibus dolorem suscipit nostrum obcaecati libero sapiente non dignissimos reprehenderit.</div>
+    <h1>Q-15</h1>
+    <div class="media15">
+        <div class="submed">single-col-1</div>
+        <div class="submed2">single-col-2</div>
+    </div>
+</body>
+</html>
